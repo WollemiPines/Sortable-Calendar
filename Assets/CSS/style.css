@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -25,9 +25,28 @@ textarea {
   white-space: pre-wrap;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.center-block {
+  width: 85%;
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+}
+
+.hour,
+.ui-state-default,
+.saveBtn {
+  padding: 30px;
+  max-height: 75px;
 }
 
 .row {
@@ -68,4 +87,16 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+button {
+  border: none;
+}
+
+.ui-state-highlight {
+  background-color: #888888;
+}
+.ui-sortable-handle {
+  color: black;
+  background-color: #ffffff;
+  text-align: start;
 }

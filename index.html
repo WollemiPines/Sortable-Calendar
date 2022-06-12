@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+      href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
     />
     <link
       rel="stylesheet"
@@ -22,7 +22,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
+    <link rel="stylesheet" href="./Assets/CSS/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -33,10 +34,53 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div class="left-block">
+          <ul class="time-of-day">
+            <li class="hour am9">9am</li>
+            <li class="hour am10">10am</li>
+            <li class="hour am11">11am</li>
+            <li class="hour pm12">12pm</li>
+            <li class="hour pm1">1pm</li>
+            <li class="hour pm2">2pm</li>
+            <li class="hour pm3">3pm</li>
+            <li class="hour pm4">4pm</li>
+            <li class="hour pm5">5pm</li>
+          </ul>
+      </div>
+
+      <div class="center-block">
+        <ul class="time-block">
+          <li class="ui-state-default" data-e="am9">Item 1</li>
+          <li class="ui-state-default" data-e="am10">Item 2</li>
+          <li class="ui-state-default" data-e="am11">Item 3</li>
+          <li class="ui-state-default" data-e="pm12">Item 4</li>
+          <li class="ui-state-default" data-e="pm1">Item 5</li>
+          <li class="ui-state-default" data-e="pm2">Item 6</li>
+          <li class="ui-state-default" data-e="pm3">Item 7</li>
+          <li class="ui-state-default" data-e="pm4">Item 8</li>
+          <li class="ui-state-default" data-e="pm5">Item 9</li>
+        </ul>
+      </div>
+
+      <div class="right-block">
+        <ul class="submit-btn-column">
+          <li> <button class="saveBtn" data-s="am9">Save</button></li>
+          <li> <button class="saveBtn" data-s="am10">Save</button></li>
+          <li> <button class="saveBtn" data-s="am11">Save</button></li>
+          <li> <button class="saveBtn" data-s="pm12">Save</button></li>
+          <li> <button class="saveBtn" data-s="pm1">Save</button></li>
+          <li> <button class="saveBtn" data-s="pm2">Save</button></li>
+          <li> <button class="saveBtn" data-s="pm3">Save</button></li>
+          <li> <button class="saveBtn" data-s="pm4">Save</button></li>
+          <li> <button class="saveBtn" data-s="pm5">Save</button></li>
+          
+        </ul>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="Assets/JS/script.js"></script>
   </body>
 </html>
