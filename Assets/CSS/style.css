@@ -46,7 +46,8 @@ textarea {
 .ui-state-default,
 .saveBtn {
   padding: 30px;
-  max-height: 75px;
+  max-height: 80px;
+  min-height: 80px;
 }
 
 .row {
@@ -54,7 +55,14 @@ textarea {
   height: 80px;
   border-top: 1px solid white;
 }
-
+.ui-state-highlight {
+  background-color: #888888;
+}
+.ui-sortable-handle {
+  color: black;
+  background-color: #ffffff;
+  text-align: start;
+}
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -90,13 +98,4 @@ textarea {
 }
 button {
   border: none;
-}
-
-.ui-state-highlight {
-  background-color: #888888;
-}
-.ui-sortable-handle {
-  color: black;
-  background-color: #ffffff;
-  text-align: start;
 }
