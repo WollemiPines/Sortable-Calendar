@@ -56,12 +56,14 @@ textarea {
   border-top: 1px solid white;
 }
 .ui-state-highlight {
-  background-color: #888888;
-}
-.ui-sortable-handle {
-  color: black;
   background-color: #ffffff;
+}
+.ui-sortable-handle,
+.ui-sortable-handle:hover {
+  border-top: 1px solid white;
+  color: black;
   text-align: start;
+  cursor: grab;
 }
 .hour {
   background-color: #ffffff;
@@ -82,6 +84,17 @@ textarea {
 .future {
   background-color: #77dd77;
   color: white;
+}
+
+.form-El-Class,
+.form-El-Class:active,
+.form-El-Class:visited {
+  width: 100%;
+  background-color: inherit;
+  border: 0px none transparent;
+
+  margin: -5px;
+  padding: -5px;
 }
 
 .saveBtn {
