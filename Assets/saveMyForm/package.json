@@ -1,0 +1,64 @@
+{
+  "name": "savemyform.jquery",
+  "version": "1.5.6",
+  "description": "Save form state in the browser's localStorage",
+  "main": "src/saveMyForm.jquery.js",
+  "scripts": {
+    "test": "karma start --single-run",
+    "karma": "karma start",
+    "minify": "uglifyjs src/saveMyForm.jquery.js -c -m -o src/saveMyForm.jquery.min.js",
+    "replace_version_in_js": "rexreplace \"\\* version: .*\" \"* version: %npm_package_version%\" src/saveMyForm.jquery.js -G",
+    "changelog:patch": "changelog -p",
+    "changelog:minor": "changelog -m",
+    "changelog:major": "changelog -M",
+    "version": "npm run replace_version_in_js && npm run minify && git add .",
+    "update_git_tags": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjjonesnz/saveMyForm.jquery.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "jquery-form",
+    "jquery",
+    "form",
+    "forms",
+    "input",
+    "data",
+    "save",
+    "persist",
+    "state",
+    "store",
+    "local",
+    "storage",
+    "localstorage"
+  ],
+  "author": "Paul Jones",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjjonesnz/saveMyForm.jquery/issues"
+  },
+  "homepage": "https://github.com/pjjonesnz/saveMyForm.jquery#readme",
+  "devDependencies": {
+    "generate-changelog": "^1.8.0",
+    "istanbul": "^0.4.5",
+    "jasmine": "^3.5.0",
+    "jasmine-core": "^3.5.0",
+    "jasmine-jquery": "^2.1.1",
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.1",
+    "karma-jasmine": "^3.1.0",
+    "karma-jasmine-html-reporter": "^1.5.1",
+    "karma-jquery": "^0.2.4",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "0.0.32",
+    "rexreplace": "^5.1.5",
+    "uglify-js": "^3.7.6"
+  },
+  "dependencies": {}
+}
