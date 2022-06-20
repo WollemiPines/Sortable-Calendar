@@ -1,5 +1,4 @@
 // Create Variables
-var textEl = $(".formEl");
 var timeColor = $(".time-color");
 var timeBlockBtn= $(".time-block button");
 var timeBlockColor=$(".time-block input");
@@ -9,13 +8,16 @@ timeBlockBtn.addClass('saveBtn');
 timeBlockColor.addClass('input-class');
 
 
-var am9 = $("#am9");
+// Add varable names to input values
+var am9 = $("#am9")
 var am10 = $("#am10");
 var am11 = $("#am11");
-
-
-
-
+var pm12 = $("#pm12")
+var pm1 = $("#pm1");
+var pm2 = $("#pm2");
+var pm3 = $("#pm3")
+var pm4 = $("#pm4");
+var pm5 = $("#pm5");
 
 
 // Display current weekday on top of screen
@@ -24,37 +26,45 @@ function disp_day(){
 }
 disp_day();
 
-function createFormEL(){
+function saveForm(){
 
-    $(".am9b .saveBtn").click(saveBtnAm9);
-    $(".am10b .saveBtn").click(saveBtnAm10);
+    $(".saveBtn").click(saveBtn);
 
-    function saveBtnAm9(){
-      let am9val = am9.val();
-      localStorage.setItem(am9, am9val);
-    
-
+    function saveBtn(){
+      localStorage.setItem("am9", am9.val());
+      localStorage.setItem("am10", am10.val());
+      localStorage.setItem("am11", am11.val());
+      localStorage.setItem("pm12", pm12.val());
+      localStorage.setItem("pm1", pm1.val());
+      localStorage.setItem("pm2", pm2.val());
+      localStorage.setItem("pm3", pm3.val());
+      localStorage.setItem("pm4", pm4.val());
+      localStorage.setItem("pm5", pm5.val());
     }
-    am9val=am9.val(localStorage.am9)
-
-
-      function saveBtnAm10(){
-      let am10val = am10.val();
-      localStorage.setItem(am10, am10val);
-
-      }
-      am10val=am10.val(localStorage.am10)
-
-
-      console.log(localStorage.am10, localStorage.am9);
-
-
-
-
-
 }
+var am9val = localStorage.getItem("am9");
+var am10val = localStorage.getItem("am10");
+var am11val = localStorage.getItem("am11");
+var pm12val = localStorage.getItem("pm12");
+var pm1val = localStorage.getItem("pm1");
+var pm2val = localStorage.getItem("pm2");
+var pm3val = localStorage.getItem("pm3");
+var pm4val = localStorage.getItem("pm4");
+var pm5val = localStorage.getItem("pm5");
 
-createFormEL()
+
+$("#am9").val(localStorage.getItem("am9"));
+$("#am10").val(localStorage.getItem("am10"));
+$("#am11").val(localStorage.getItem("am11"));
+$("#pm12").val(localStorage.getItem("pm12"));
+$("#pm1").val(localStorage.getItem("pm1"));
+$("#pm2").val(localStorage.getItem("pm2"));
+$("#pm3").val(localStorage.getItem("pm3"));
+$("#pm4").val(localStorage.getItem("pm4"));
+$("#pm5").val(localStorage.getItem("pm5"));
+
+
+saveForm()
 
 
 let current_time;
@@ -64,7 +74,6 @@ var after= $("");
 
 function calc_current_time(){
   current_time = moment().format("ha");
-  current_time="11pm";
 
 
   if(current_time>="12am" && current_time<="8am"){
