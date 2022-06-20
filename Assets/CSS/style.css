@@ -1,18 +1,11 @@
+/* Body, all text */
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
+/* Header and display time */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -20,30 +13,41 @@ textarea {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
-.description {
-  white-space: pre-wrap;
-}
-
+/* All El bellow the solid black line */
 .container {
   display: flex;
   flex-direction: row;
 }
-
+/* Fixed time of day elements */
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+/* hour and save button sizing */
+.hour,
+.saveBtn {
+  padding: 30px;
+  max-height: 80px;
+  min-height: 80px;
+}
+/* center color changing body */
 .center-block {
   width: 85%;
 }
-
+/* center color changing elements withing center block */
 .time-block {
   text-align: center;
   border-radius: 15px;
   list-style-type: none;
   width: 100%;
 }
+/* contains both input feild and btn */
 .time-color {
   display: flex;
   flex-direction: row;
 }
+/* Input feild for form */
 .input-class,
 .input-class:active {
   padding: 10px;
@@ -57,54 +61,22 @@ textarea {
   text-align: start;
 }
 
-.hour,
-.saveBtn {
-  padding: 30px;
-  max-height: 80px;
-  min-height: 80px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
+/* class to update background color of input field when JS says to */
 .past {
   background-color: #d3d3d3;
   color: white;
 }
-
+/* class to update background color of input field when JS says to */
 .present {
   background-color: #ff6961;
   color: white;
 }
-
+/* class to update background color of input field when JS says to */
 .future {
   background-color: #77dd77;
   color: white;
 }
-
-.form-El-Class,
-.form-El-Class:active,
-.form-El-Class:visited {
-  width: 100%;
-  background-color: inherit;
-  border: 0px none transparent;
-  padding: 15px;
-  max-height: 80px;
-  min-height: 80px;
-  border-top: 1px solid white;
-  color: rgb(200, 61, 61);
-  text-align: start;
-}
-
+/* save btn formating */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- third party stylesheets -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,36 +25,46 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- Stylesheets for this document -->
     <link rel="stylesheet" href="./Assets/CSS/reset.css" />
     <link rel="stylesheet" href="./Assets/CSS/style.css" />
+
+    <!-- Title -->
     <title>Work Day Scheduler</title>
+    
   </head>
 
+  <!-- Body -->
   <body>
+    <!-- Header -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    <!-- All El bellow the solid black line -->
     <div class="container">
+
+      <!-- Fixed time of day elements -->
       <div class="left-block">
+        <!-- list -->
           <ul class="time-of-day">
-            <li class="hour am9">9am</li>
-            <li class="hour am10">10am</li>
-            <li class="hour am11">11am</li>
-            <li class="hour pm12">12pm</li>
-            <li class="hour pm1">1pm</li>
-            <li class="hour pm2">2pm</li>
-            <li class="hour pm3">3pm</li>
-            <li class="hour pm4">4pm</li>
-            <li class="hour pm5">5pm</li>
+            <li class="hour">9am</li>
+            <li class="hour">10am</li>
+            <li class="hour">11am</li>
+            <li class="hour">12pm</li>
+            <li class="hour">1pm</li>
+            <li class="hour">2pm</li>
+            <li class="hour">3pm</li>
+            <li class="hour">4pm</li>
+            <li class="hour">5pm</li>
           </ul>
       </div>
-
+<!-- Center block that contains inputs and btns -->
       <div class="center-block">
         <form id="formEl" ></form>
         <ul class="time-block">
-          <!-- dynamiclly add time color class in JS -->
+          <!-- list of input fields with buttons -->
           <li class="time-color am9b" ><input id="am9" type="text" value="hello"><button >Save</button></form></li>
           <li class="time-color am10b" ><input id="am10" type="text" value="hello"><button >Save</button></form></li>
           <li class="time-color am11b" ><input id="am11" type="text" value="hello"><button >Save</button></form></li>
@@ -65,9 +78,11 @@
     </form>
       </div>
 
+      <!-- links to API's  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- JS file for this document -->
     <script src="./Assets/JS/script.js"></script>
   </body>
 </html>

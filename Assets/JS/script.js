@@ -3,7 +3,7 @@ var timeColor = $(".time-color");
 var timeBlockBtn= $(".time-block button");
 var timeBlockColor=$(".time-block input");
 
-// Dynamilly add classes
+// Dynamicaly add classes
 timeBlockBtn.addClass('saveBtn');
 timeBlockColor.addClass('input-class');
 
@@ -26,56 +26,18 @@ function disp_day(){
 }
 disp_day();
 
-function saveForm(){
 
-    $(".saveBtn").click(saveBtn);
-
-    function saveBtn(){
-      localStorage.setItem("am9", am9.val());
-      localStorage.setItem("am10", am10.val());
-      localStorage.setItem("am11", am11.val());
-      localStorage.setItem("pm12", pm12.val());
-      localStorage.setItem("pm1", pm1.val());
-      localStorage.setItem("pm2", pm2.val());
-      localStorage.setItem("pm3", pm3.val());
-      localStorage.setItem("pm4", pm4.val());
-      localStorage.setItem("pm5", pm5.val());
-    }
-}
-var am9val = localStorage.getItem("am9");
-var am10val = localStorage.getItem("am10");
-var am11val = localStorage.getItem("am11");
-var pm12val = localStorage.getItem("pm12");
-var pm1val = localStorage.getItem("pm1");
-var pm2val = localStorage.getItem("pm2");
-var pm3val = localStorage.getItem("pm3");
-var pm4val = localStorage.getItem("pm4");
-var pm5val = localStorage.getItem("pm5");
-
-
-$("#am9").val(localStorage.getItem("am9"));
-$("#am10").val(localStorage.getItem("am10"));
-$("#am11").val(localStorage.getItem("am11"));
-$("#pm12").val(localStorage.getItem("pm12"));
-$("#pm1").val(localStorage.getItem("pm1"));
-$("#pm2").val(localStorage.getItem("pm2"));
-$("#pm3").val(localStorage.getItem("pm3"));
-$("#pm4").val(localStorage.getItem("pm4"));
-$("#pm5").val(localStorage.getItem("pm5"));
-
-
-saveForm()
-
-
+// Function to update background colors on input elements as var current time changes
 let current_time;
 var before = $("");
 var current = $("");
 var after= $("");
 
-function calc_current_time(){
+function current_time_colors(){
+  // get current time
   current_time = moment().format("ha");
 
-
+// apply conditions current time must meet, and update the value of before, current and after variables
   if(current_time>="12am" && current_time<="8am"){
     after = $("li.time-color");
    }
@@ -129,10 +91,50 @@ function calc_current_time(){
         before = $("li.time-color");
        }
 
+      //  add CSS classes to the before, current and after variables
        before.addClass('past');
        current.addClass('present');
        after.addClass('future');
 }
+current_time_colors();
 
-calc_current_time();
+// Save form ellements to local storage
+function saveForm(){
 
+  $(".saveBtn").click(saveBtn);
+// On save bttn click, set local storage items
+  function saveBtn(){
+    localStorage.setItem("am9", am9.val());
+    localStorage.setItem("am10", am10.val());
+    localStorage.setItem("am11", am11.val());
+    localStorage.setItem("pm12", pm12.val());
+    localStorage.setItem("pm1", pm1.val());
+    localStorage.setItem("pm2", pm2.val());
+    localStorage.setItem("pm3", pm3.val());
+    localStorage.setItem("pm4", pm4.val());
+    localStorage.setItem("pm5", pm5.val());
+  }
+}
+saveForm()
+
+// after saveForm is run, retreive items
+var am9val = localStorage.getItem("am9");
+var am10val = localStorage.getItem("am10");
+var am11val = localStorage.getItem("am11");
+var pm12val = localStorage.getItem("pm12");
+var pm1val = localStorage.getItem("pm1");
+var pm2val = localStorage.getItem("pm2");
+var pm3val = localStorage.getItem("pm3");
+var pm4val = localStorage.getItem("pm4");
+var pm5val = localStorage.getItem("pm5");
+
+// and set them as the new values
+$("#am9").val(localStorage.getItem("am9"));
+$("#am10").val(localStorage.getItem("am10"));
+$("#am11").val(localStorage.getItem("am11"));
+$("#pm12").val(localStorage.getItem("pm12"));
+$("#pm1").val(localStorage.getItem("pm1"));
+$("#pm2").val(localStorage.getItem("pm2"));
+$("#pm3").val(localStorage.getItem("pm3"));
+$("#pm4").val(localStorage.getItem("pm4"));
+$("#pm5").val(localStorage.getItem("pm5"));
